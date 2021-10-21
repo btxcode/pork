@@ -90,7 +90,7 @@ We find Apache and SSH running on their usual ports.
 Browsing to port 80 redirects us to pork.htb.
 Add pork.htb to the hosts file and browse to it. We come across a website with Wordpress.
 
-![img](/assets/1.PNG)
+![img](https://github.com/btxcode/pork/blob/main/assets/1.png)
 
 do a wordpress scan using wpscan to get information 
 
