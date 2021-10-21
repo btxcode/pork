@@ -14,7 +14,7 @@ Passwords:
 | User     | Password                            |
 | ---------| ----------------------------------- |
 | d3nt1    | l0v35u64r							 |
-| parul14n | napinadar							 |
+| parul14n | tab0n1jagal0ndabah							 |
 | root     | saksangnamargota					 |
 
 ### Key Processes
@@ -292,7 +292,7 @@ Dear D3nt1
 Im Sorry, I'm Sick right now.
 can you help me?
 please login to my account
-my password is napinadar
+my password is tab0n1jagal0ndabah
 please open the browser in your desktop to see
 how big profit we sell.
 ```
