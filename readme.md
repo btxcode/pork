@@ -340,3 +340,5 @@ def open(url, new=0, autoraise=True):
 Executing the commands `sudo /usr/bin/python3.8 /home/parul14n/Desktop/benefit.py` should give us a reverse shell as Root, after which the final flag can be accessed.
 
 ![img](https://github.com/btxcode/pork/blob/main/assets/12.png)
+
+credit : btxcode
